@@ -12,18 +12,10 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
-
-  <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-
-  <% if user_signed_in? %>
   <%= render "layouts/navbar" %>
+  <body>
   <main class="w-50 mx-auto mt-28 px-5">
     <%= yield %>
   </main>
-  <% else %>
-    <a href="/users/sign_in"> Sign In </a>
-  <% end %>
   </body>
 </html>
