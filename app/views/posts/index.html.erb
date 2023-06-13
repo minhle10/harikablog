@@ -1,16 +1,18 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Posts</h1>
-<p> Our blog has <%= Post.public_count %> articles and counting! </p>
+<p class="fw-light"> Our blog has <%= Post.public_count %> articles and counting! </p>
 <div id="posts">
   <% @posts.each do |post| %>
     <% unless post.archived? %>
       <%= render post %>
-      <p>
-        <%= link_to "Show this post", post %>
-      </p>
+      <button class="btn btn-info mb-2">
+        <%= link_to "Show this post", post, :class=>"text-reset text-decoration-none"%>
+      </button>
     <% end %>
   <% end %>
 </div>
 
-<%= link_to "New post", new_post_path %>
+<button class="btn btn-success mb-2">
+  <%= link_to "New post", new_post_path, :class=>"text-reset text-decoration-none"%>
+</button>

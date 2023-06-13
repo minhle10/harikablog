@@ -13,17 +13,17 @@
 
   <div>
     <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, :class=>"rounded" %>
   </div>
 
   <div>
     <%= form.label :author, style: "display: block" %>
-    <%= form.text_field :author %>
+    <%= form.text_field :author, :class=>"rounded" %>
   </div>
 
   <div>
     <%= form.label :content, style: "display: block" %>
-    <%= form.text_area :content %>
+    <%= form.text_area :content, :class=>"rounded" %>
   </div>
   <div>
     <%= form.label :status %><br>
@@ -31,6 +31,6 @@
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit :class=>"btn btn-primary mt-2"%>
   </div>
 <% end %>
