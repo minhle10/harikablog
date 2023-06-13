@@ -1,5 +1,11 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
+
+    def authenticate_user!
+        redirect_to '/login' unless current_user
+    end
+
 
   # GET /posts or /posts.json
   def index
