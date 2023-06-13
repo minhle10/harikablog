@@ -1,7 +1,7 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Posts</h1>
-
+<p> Our blog has <%= Post.public_count %> articles and counting! </p>
 <div id="posts">
   <% @posts.each do |post| %>
     <% unless post.archived? %>
