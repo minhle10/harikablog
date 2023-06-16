@@ -37,6 +37,8 @@ gem "devise"
 
 gem "letter_opener"
 
+gem "aws-sdk-s3", require: false
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
@@ -68,6 +70,8 @@ group :development do
   # gem "rack-mini-profiler"
 
   gem "annotate", '3.2.0'
+
+  gem 'dotenv-rails', groups: [:development, :test]
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
