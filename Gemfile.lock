@@ -215,8 +215,11 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rake (13.0.6)
+    redis (4.8.1)
     redis-client (0.14.1)
       connection_pool
+    redis-namespace (1.11.0)
+      redis (>= 4)
     regexp_parser (2.8.1)
     reline (0.3.5)
       io-console (~> 0.5)
@@ -296,9 +299,11 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.5)
+  redis (~> 4.0)
+  redis-namespace
   ruby-openai
   selenium-webdriver
-  sidekiq (~> 7.0.9)
+  sidekiq (~> 7.0.3)
   sprockets-rails
   stimulus-rails
   turbo-rails

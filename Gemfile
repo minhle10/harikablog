@@ -41,7 +41,10 @@ gem "aws-sdk-s3", require: false
 
 gem "ruby-openai"
 
-gem "sidekiq", "~> 7.0.9"
+gem "sidekiq", "~> 7.0.3"
+
+gem 'redis', '~> 4.0'
+gem 'redis-namespace'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
