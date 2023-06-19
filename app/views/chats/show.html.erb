@@ -1,0 +1,18 @@
+<div class="mx-auto d-flex">
+  <div class="mx-auto">
+
+    <div class="bg-white py-8">
+      <div class="mx-auto max-w-lg px-6">
+        <ul class="list-unstyled overflow-auto" style="max-height: 48vh; flex-direction: column-reverse;">
+          <%= turbo_stream_from "#{dom_id(@chat)}_messages" %>
+          <div id="<%= dom_id(@chat) %>_messages">
+            <%= render @chat.messages %>
+          </div>
+        </ul>
+
+        <%= render partial: "messages/form", locals: { chat: @chat } %>
+      </div>
+    </div>
+
+  </div>
+</div>

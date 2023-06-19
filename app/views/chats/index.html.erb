@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Chats</h1>
+
+<%= form_with(model: Chat.new, url: chats_path, method: :post) do |form| %>
+  <%= form.button type: :submit %>
+<% end %>
+
+
+
+
