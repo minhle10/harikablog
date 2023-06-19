@@ -39,6 +39,8 @@ gem "letter_opener"
 
 gem "aws-sdk-s3", require: false
 
+gem "ruby-openai"
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
