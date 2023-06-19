@@ -1,6 +1,6 @@
 # app/jobs/get_ai_response.rb
 
-class GetAiResponse < SidekiqJob
+class GetAiResponse < ActiveJob::Base
     def perform(chat_id)
       chat = Chat.find(chat_id)
       call_openai(chat: chat)
