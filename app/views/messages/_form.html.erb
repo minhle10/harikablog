@@ -1,0 +1,14 @@
+<div id="<%= dom_id(chat) %>_message_form" class="turbo-frame">
+  <%= form_with(model: Message.new, url: [chat, chat.messages.new]) do |form| %>
+    <div class="my-5">
+      <%= form.text_area :content, rows: 4, class: "form-control shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2", autofocus: true, "data-turbo-action": "keydown:cmd.enter->form#requestSubmit" %>
+    </div>
+
+    <div class="d-flex justify-content-end">
+      <%= form.button type: :submit, class: "btn btn-primary rounded-lg py-3 px-5 inline-block font-medium" do %>
+        <i class="fas fa-paper-plane"></i>
+        <span class="pl-2">Send</span>
+      <% end %>
+    </div>
+  <% end %>
+</div>

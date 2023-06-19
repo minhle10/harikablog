@@ -1,0 +1,11 @@
+<div id="<%= dom_id(message) %>_messages">
+  <% if message.user? %>
+    <div class="bg-primary rounded-lg m-8 text-white p-4">
+      <%= message.content %>
+    </div>
+  <% else %>
+    <div class="bg-light rounded-lg m-8 p-4">
+      <%= message.content %>
+    </div>
+  <% end %>
+</div>
